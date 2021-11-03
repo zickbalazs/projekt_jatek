@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.IO;
 using System.Windows.Forms;
 
@@ -19,13 +20,17 @@ namespace hazifeladat
             pictureBox1.Image = Properties.Resources.heading;
             Spawner.Start();
             HitDetect.Start();
+            WaveTimer.Start();
+            waveLbl.Text = wave.ToString();
         }
         public bool elore, hatra, balra, jobbra;
         string irany="elore";
-        int hp=100;
-        int armor = 0;
-        int penz = 0;
-        int lsz = 50;
+        public int hp=100;
+        public int armor = 50;
+        int wave = 1;
+        int wavetime = 60;
+        public int penz = 0;
+        public int lsz = 50; //ezt még nem használja semmi!;
         Random random = new Random();
         Random zspeed = new Random();
 
@@ -39,15 +44,135 @@ namespace hazifeladat
 
         private void Spawner_Tick(object sender, EventArgs e)
         {
-            Zombi z = new Zombi();
-            z.HaladasiIrany = "balrol";
-            z.zombiViz = -100;
-            z.zombiFugg = pictureBox1.Top;
-            z.fast += zspeed.Next(1, 10);
-            if (z.fast < 4) z.type = "Zombi_Slow";
-            else if (z.fast > 4 && z.fast < 8) z.type = "Zombi_Medium";
-            else z.type = "Zombi_Fast";
-            z.Teremt(this);
+            if (wave < 3)
+            {
+                Zombi z = new Zombi();
+                z.fast = zspeed.Next(1, 10);
+                if (z.fast < 4) z.type = "Zombi_Slow";
+                else if (z.fast > 4 && z.fast < 8) z.type = "Zombi_Medium";
+                else z.type = "Zombi_Fast";
+                switch (random.Next(1, 5))
+                {
+                    case 1:
+                        z.HaladasiIrany = "balrol";
+                        z.zombiViz = -100;
+                        z.zombiFugg = pictureBox1.Location.Y;
+                        break;
+                    case 2:
+                        z.HaladasiIrany = "jobbra";
+                        z.zombiViz = 900;
+                        z.zombiFugg = pictureBox1.Location.Y;
+                        break;
+                    case 3:
+                        z.HaladasiIrany = "fent";
+                        z.zombiFugg = -100;
+                        z.zombiViz = pictureBox1.Location.X;
+                        break;
+                    case 4:
+                        z.HaladasiIrany = "fent";
+                        z.zombiFugg = -100;
+                        z.zombiViz = pictureBox1.Location.X;
+                        break;
+                }
+                z.Teremt(this);
+                Spawner.Interval = random.Next(2000, 8001);
+            }
+            else if (wave > 3 && wave < 10)
+            {
+                for (int i = 1; i < 3; i++)
+                {
+                    Zombi z = new Zombi();
+                    z.fast = zspeed.Next(10, 16);
+                    if (z.fast < 4) z.type = "Zombi_Slow";
+                    else if (z.fast > 4 && z.fast < 8) z.type = "Zombi_Medium";
+                    else z.type = "Zombi_Fast";
+                    switch (random.Next(1, 5))
+                    {
+                        case 1:
+                            z.HaladasiIrany = "balrol";
+                            z.zombiViz = -100;
+                            z.zombiFugg = pictureBox1.Location.Y;
+                            break;
+                        case 2:
+                            z.HaladasiIrany = "jobbra";
+                            z.zombiViz = 900;
+                            z.zombiFugg = pictureBox1.Location.Y;
+                            break;
+                        case 3:
+                            z.HaladasiIrany = "fent";
+                            z.zombiFugg = -100;
+                            z.zombiViz = pictureBox1.Location.X;
+                            break;
+                        case 4:
+                            z.HaladasiIrany = "fent";
+                            z.zombiFugg = -100;
+                            z.zombiViz = pictureBox1.Location.X;
+                            break;
+                    }
+                    z.Teremt(this);
+                    Spawner.Interval = random.Next(2000, 4001);
+                }
+            }
+            else
+            {
+                for (int i = 1; i < 4; i++)
+                {
+                    Zombi z = new Zombi();
+                    z.fast = zspeed.Next(10, 16);
+                    if (z.fast < 4) z.type = "Zombi_Slow";
+                    else if (z.fast > 4 && z.fast < 8) z.type = "Zombi_Medium";
+                    else z.type = "Zombi_Fast";
+                    switch (random.Next(1, 5))
+                    {
+                        case 1:
+                            z.HaladasiIrany = "balrol";
+                            z.zombiViz = -100;
+                            z.zombiFugg = pictureBox1.Location.Y;
+                            break;
+                        case 2:
+                            z.HaladasiIrany = "jobbra";
+                            z.zombiViz = 900;
+                            z.zombiFugg = pictureBox1.Location.Y;
+                            break;
+                        case 3:
+                            z.HaladasiIrany = "fent";
+                            z.zombiFugg = -100;
+                            z.zombiViz = pictureBox1.Location.X;
+                            break;
+                        case 4:
+                            z.HaladasiIrany = "fent";
+                            z.zombiFugg = -100;
+                            z.zombiViz = pictureBox1.Location.X;
+                            break;
+                    }
+                    z.Teremt(this);
+                }
+                Spawner.Interval = random.Next(1000, 4001);
+            }
+        }
+
+        private void WaveTimer_Tick(object sender, EventArgs e)
+        {
+            if (wavetime == 0)
+            {
+                wave++;
+                Shop shop = new Shop();
+                shop.money = penz;
+                shop.health = hp;
+                shop.arm = armor;
+                shop.Activate();
+                shop.Show();
+                while (shop.opened)
+                {
+                    Thread.Sleep(1000);
+                    //wavetime visszaállítása ide!!!
+                }
+            }
+            else
+            {
+                waveTimeLbl.Text = $"{wavetime}s";
+                wavetime--;
+            }
         }
 
         private void HitDetect_Tick(object sender, EventArgs e)
@@ -66,10 +191,28 @@ namespace hazifeladat
                             if (j.Name == "Zombi_Fast") penz += 40;
                             if (j.Name == "Zombi_Medium") penz += 20;
                             if (j.Name == "Zombi_Slow") penz += 10;
+                            PictureBox asd = new PictureBox();
+                            asd.Image = Properties.Resources.heading;
+                            asd.Location = new Point(j.Location.X + random.Next(-11, 11), j.Location.Y + random.Next(-11, 11));
+                            asd.SendToBack();
+                            Controls.Add(asd);
                             Controls.Remove(i);
                             Controls.Remove(j);
                             i.Dispose();
                             j.Dispose();
+                        }
+                    }
+                    if ((i is PictureBox && i.Name=="pictureBox1") && (j is PictureBox && j.Name.Contains("Zombi")))
+                    {
+                        if (i.Bounds.IntersectsWith(j.Bounds))
+                        {
+                            int damage = random.Next(1, 16);
+                            if (armor > (damage / 2) + 1)
+                            {
+                                hp -= damage / 2;
+                                armor -= damage / 2;
+                            }
+                            else hp -= damage;
                         }
                     }
                 }

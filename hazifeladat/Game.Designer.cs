@@ -37,6 +37,9 @@ namespace hazifeladat
             this.CashLbl = new System.Windows.Forms.Label();
             this.HPLbl = new System.Windows.Forms.Label();
             this.ArmLbl = new System.Windows.Forms.Label();
+            this.WaveTimer = new System.Windows.Forms.Timer(this.components);
+            this.waveLbl = new System.Windows.Forms.Label();
+            this.waveTimeLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,11 +98,35 @@ namespace hazifeladat
             this.ArmLbl.TabIndex = 4;
             this.ArmLbl.Text = "Arm: ";
             // 
+            // WaveTimer
+            // 
+            this.WaveTimer.Interval = 1000;
+            this.WaveTimer.Tick += new System.EventHandler(this.WaveTimer_Tick);
+            // 
+            // waveLbl
+            // 
+            this.waveLbl.AutoSize = true;
+            this.waveLbl.Location = new System.Drawing.Point(716, 9);
+            this.waveLbl.Name = "waveLbl";
+            this.waveLbl.Size = new System.Drawing.Size(45, 13);
+            this.waveLbl.TabIndex = 5;
+            this.waveLbl.Text = "Hullám: ";
+            // 
+            // waveTimeLbl
+            // 
+            this.waveTimeLbl.AutoSize = true;
+            this.waveTimeLbl.Location = new System.Drawing.Point(716, 33);
+            this.waveTimeLbl.Name = "waveTimeLbl";
+            this.waveTimeLbl.Size = new System.Drawing.Size(0, 13);
+            this.waveTimeLbl.TabIndex = 6;
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.waveTimeLbl);
+            this.Controls.Add(this.waveLbl);
             this.Controls.Add(this.ArmLbl);
             this.Controls.Add(this.HPLbl);
             this.Controls.Add(this.CashLbl);
@@ -125,5 +152,8 @@ namespace hazifeladat
         private System.Windows.Forms.Label CashLbl;
         private System.Windows.Forms.Label HPLbl;
         private System.Windows.Forms.Label ArmLbl;
+        private System.Windows.Forms.Timer WaveTimer;
+        private System.Windows.Forms.Label waveLbl;
+        private System.Windows.Forms.Label waveTimeLbl;
     }
 }

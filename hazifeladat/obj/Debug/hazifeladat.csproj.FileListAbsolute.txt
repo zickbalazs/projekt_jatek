@@ -9,3 +9,14 @@ H:\Programozás\C#\hazifeladat\hazifeladat\obj\Debug\hazifeladat.csproj.CoreComp
 H:\Programozás\C#\hazifeladat\hazifeladat\obj\Debug\hazifeladat.exe
 H:\Programozás\C#\hazifeladat\hazifeladat\obj\Debug\hazifeladat.pdb
 H:\Programozás\C#\hazifeladat\hazifeladat\obj\Debug\hazifeladat.Game.resources
+H:\Programozás\C#\projekt_jatek\hazifeladat\bin\Debug\hazifeladat.exe.config
+H:\Programozás\C#\projekt_jatek\hazifeladat\bin\Debug\hazifeladat.exe
+H:\Programozás\C#\projekt_jatek\hazifeladat\bin\Debug\hazifeladat.pdb
+H:\Programozás\C#\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.csproj.AssemblyReference.cache
+H:\Programozás\C#\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.MainMenu.resources
+H:\Programozás\C#\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.Game.resources
+H:\Programozás\C#\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.Properties.Resources.resources
+H:\Programozás\C#\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.csproj.GenerateResource.cache
+H:\Programozás\C#\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.csproj.CoreCompileInputs.cache
+H:\Programozás\C#\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.exe
+H:\Programozás\C#\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.pdb

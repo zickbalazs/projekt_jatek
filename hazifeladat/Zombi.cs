@@ -22,10 +22,22 @@ namespace hazifeladat
             zomb.Size = new Size(100, 100);
             zomb.Left = zombiViz;
             zomb.Top = zombiFugg;
-            if (HaladasiIrany == "fent") zomb.Image = Properties.Resources.headingD;
-            else if (HaladasiIrany == "lent") zomb.Image = Properties.Resources.heading;
-            else if (HaladasiIrany == "balrol") zomb.Image = Properties.Resources.headingR;
-            else if (HaladasiIrany == "jobbrol") zomb.Image = Properties.Resources.headingL;
+            if (HaladasiIrany == "fent")
+            {
+                zomb.Image = Properties.Resources.headingD;
+            }
+            else if (HaladasiIrany == "lent")
+            {
+                zomb.Image = Properties.Resources.heading;
+            }
+            else if (HaladasiIrany == "balrol")
+            {
+                zomb.Image = Properties.Resources.headingR;
+            }
+            else if (HaladasiIrany == "jobbrol")
+            {
+                zomb.Image = Properties.Resources.headingL;
+            }
             form.Controls.Add(zomb);
             t.Interval = 100;
             t.Tick += tick;
@@ -40,7 +52,7 @@ namespace hazifeladat
                     zomb.Top += fast;
                     break;
                 case "lent":
-                    zomb.Top += fast;
+                    zomb.Top -= fast;
                     break;
                 case "balrol":
                     zomb.Left += fast;
