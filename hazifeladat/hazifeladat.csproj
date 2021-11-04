@@ -112,5 +112,14 @@
   <ItemGroup>
     <None Include="bin\Debug\headingR.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ammo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medkit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

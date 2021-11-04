@@ -40,7 +40,7 @@ namespace hazifeladat
             this.WaveTimer = new System.Windows.Forms.Timer(this.components);
             this.waveLbl = new System.Windows.Forms.Label();
             this.waveTimeLbl = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ammoLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,6 +107,7 @@ namespace hazifeladat
             // waveLbl
             // 
             this.waveLbl.AutoSize = true;
+            this.waveLbl.BackColor = System.Drawing.Color.FloralWhite;
             this.waveLbl.Location = new System.Drawing.Point(716, 9);
             this.waveLbl.Name = "waveLbl";
             this.waveLbl.Size = new System.Drawing.Size(45, 13);
@@ -116,27 +117,31 @@ namespace hazifeladat
             // waveTimeLbl
             // 
             this.waveTimeLbl.AutoSize = true;
+            this.waveTimeLbl.BackColor = System.Drawing.Color.White;
             this.waveTimeLbl.Location = new System.Drawing.Point(716, 33);
             this.waveTimeLbl.Name = "waveTimeLbl";
             this.waveTimeLbl.Size = new System.Drawing.Size(0, 13);
             this.waveTimeLbl.TabIndex = 6;
             // 
-            // button1
+            // ammoLbl
             // 
-            this.button1.Location = new System.Drawing.Point(12, 526);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.ammoLbl.AutoSize = true;
+            this.ammoLbl.BackColor = System.Drawing.Color.White;
+            this.ammoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ammoLbl.ForeColor = System.Drawing.Color.Green;
+            this.ammoLbl.Location = new System.Drawing.Point(12, 107);
+            this.ammoLbl.Name = "ammoLbl";
+            this.ammoLbl.Size = new System.Drawing.Size(26, 16);
+            this.ammoLbl.TabIndex = 7;
+            this.ammoLbl.Text = "A: ";
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Green;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ammoLbl);
             this.Controls.Add(this.waveTimeLbl);
             this.Controls.Add(this.waveLbl);
             this.Controls.Add(this.ArmLbl);
@@ -167,6 +172,6 @@ namespace hazifeladat
         private System.Windows.Forms.Timer WaveTimer;
         private System.Windows.Forms.Label waveLbl;
         private System.Windows.Forms.Label waveTimeLbl;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label ammoLbl;
     }
 }

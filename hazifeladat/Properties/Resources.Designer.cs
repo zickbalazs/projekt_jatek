@@ -63,6 +63,26 @@ namespace hazifeladat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ammo {
+            get {
+                object obj = ResourceManager.GetObject("ammo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap armor {
+            get {
+                object obj = ResourceManager.GetObject("armor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap heading {
             get {
                 object obj = ResourceManager.GetObject("heading", resourceCulture);
@@ -96,6 +116,16 @@ namespace hazifeladat.Properties {
         internal static System.Drawing.Bitmap headingR {
             get {
                 object obj = ResourceManager.GetObject("headingR", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap medkit {
+            get {
+                object obj = ResourceManager.GetObject("medkit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

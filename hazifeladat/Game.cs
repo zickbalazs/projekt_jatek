@@ -16,26 +16,27 @@ namespace hazifeladat
     {
         public bool elore, hatra, balra, jobbra;
         string irany = "elore";
-        public int hp = 100;
-        public int armor = 50;
-        int wave = 1;
-        int wavetime = 60;
+        public int hp;
+        public int armor;
+        int wave, wavetime;
         public int penz = 0;
         public int lsz = 50; 
-        public Game(int hp, int a, int wv, int wvT, int lsz, int p)
+        public Game(int health, int a, int wv, int wvT, int ammo, int p)
         {
             InitializeComponent();
+            BackColor = Color.FromArgb(0, 161, 5);
             wave = wv;
-            this.hp = hp;
+            hp = health;
             armor = a;
+            wave = wv;
             wavetime = wvT;
             penz = p;
-            this.lsz = lsz;
+            lsz = ammo;
             pictureBox1.Image = Properties.Resources.heading;
             Spawner.Start();
             HitDetect.Start();
             WaveTimer.Start();
-            waveLbl.Text = wave.ToString();
+            waveLbl.Text = $"Hullám: {wave}";
         }
         
         Random random = new Random();
@@ -157,7 +158,6 @@ namespace hazifeladat
                 Spawner.Interval = random.Next(1000, 4001);
             }
         }
-
         private void WaveTimer_Tick(object sender, EventArgs e)
         {
             if (wavetime == 0)
@@ -180,7 +180,7 @@ namespace hazifeladat
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
         }
 
         private void HitDetect_Tick(object sender, EventArgs e)
@@ -188,6 +188,11 @@ namespace hazifeladat
             HPLbl.Text = $"+: {hp}";
             ArmLbl.Text = $"Arm: {hp}";
             CashLbl.Text = $"$: {penz}";
+            ammoLbl.Text = $"A: {lsz}";
+            if (hp<=0)
+            {
+                Application.Exit();
+            }
             foreach (Control i in Controls)
             {
                 foreach (Control j in Controls)
@@ -221,6 +226,8 @@ namespace hazifeladat
                                 armor -= damage / 2;
                             }
                             else hp -= damage;
+                            Controls.Remove(j);
+                            j.Dispose();
                         }
                     }
                 }
@@ -266,6 +273,7 @@ namespace hazifeladat
                 b.bullSpawn(this);
                 lsz--;
             }
+            ammoLbl.Text = $"A: {lsz}";
         }
     }
 }

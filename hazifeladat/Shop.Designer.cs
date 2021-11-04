@@ -29,49 +29,61 @@ namespace hazifeladat
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.hpBtn = new System.Windows.Forms.Button();
+            this.armBtn = new System.Windows.Forms.Button();
+            this.ammBtn = new System.Windows.Forms.Button();
+            this.ammlgBtn = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.hpPbx = new System.Windows.Forms.PictureBox();
+            this.armPbx = new System.Windows.Forms.PictureBox();
+            this.ammPbx = new System.Windows.Forms.PictureBox();
+            this.ammlgPbx = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.hpPbx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.armPbx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ammPbx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ammlgPbx)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // hpBtn
             // 
-            this.button1.Location = new System.Drawing.Point(61, 120);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Vásárlás";
-            this.button1.UseVisualStyleBackColor = true;
+            this.hpBtn.Location = new System.Drawing.Point(61, 120);
+            this.hpBtn.Name = "hpBtn";
+            this.hpBtn.Size = new System.Drawing.Size(75, 23);
+            this.hpBtn.TabIndex = 0;
+            this.hpBtn.Text = "Vásárlás";
+            this.hpBtn.UseVisualStyleBackColor = true;
+            this.hpBtn.Click += new System.EventHandler(this.hpBtn_Click);
             // 
-            // button2
+            // armBtn
             // 
-            this.button2.Location = new System.Drawing.Point(187, 120);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Vásárlás";
-            this.button2.UseVisualStyleBackColor = true;
+            this.armBtn.Location = new System.Drawing.Point(187, 120);
+            this.armBtn.Name = "armBtn";
+            this.armBtn.Size = new System.Drawing.Size(75, 23);
+            this.armBtn.TabIndex = 1;
+            this.armBtn.Text = "Vásárlás";
+            this.armBtn.UseVisualStyleBackColor = true;
+            this.armBtn.Click += new System.EventHandler(this.armBtn_Click);
             // 
-            // button3
+            // ammBtn
             // 
-            this.button3.Location = new System.Drawing.Point(315, 120);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Vásárlás";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ammBtn.Location = new System.Drawing.Point(315, 120);
+            this.ammBtn.Name = "ammBtn";
+            this.ammBtn.Size = new System.Drawing.Size(75, 23);
+            this.ammBtn.TabIndex = 2;
+            this.ammBtn.Text = "Vásárlás";
+            this.ammBtn.UseVisualStyleBackColor = true;
+            this.ammBtn.Click += new System.EventHandler(this.ammBtn_Click);
             // 
-            // button4
+            // ammlgBtn
             // 
-            this.button4.Location = new System.Drawing.Point(440, 120);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Vásárlás";
-            this.button4.UseVisualStyleBackColor = true;
+            this.ammlgBtn.Location = new System.Drawing.Point(440, 120);
+            this.ammlgBtn.Name = "ammlgBtn";
+            this.ammlgBtn.Size = new System.Drawing.Size(75, 23);
+            this.ammlgBtn.TabIndex = 3;
+            this.ammlgBtn.Text = "Vásárlás";
+            this.ammlgBtn.UseVisualStyleBackColor = true;
+            this.ammlgBtn.Click += new System.EventHandler(this.ammlgBtn_Click);
             // 
             // button9
             // 
@@ -89,26 +101,71 @@ namespace hazifeladat
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Location = new System.Drawing.Point(0, 162);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 3, 20);
             this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 11);
-            this.label1.Size = new System.Drawing.Size(19, 24);
+            this.label1.Padding = new System.Windows.Forms.Padding(250, 0, 0, 11);
+            this.label1.Size = new System.Drawing.Size(269, 24);
             this.label1.TabIndex = 9;
             this.label1.Text = "$: ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // hpPbx
+            // 
+            this.hpPbx.Location = new System.Drawing.Point(61, 12);
+            this.hpPbx.Name = "hpPbx";
+            this.hpPbx.Size = new System.Drawing.Size(75, 102);
+            this.hpPbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hpPbx.TabIndex = 10;
+            this.hpPbx.TabStop = false;
+            // 
+            // armPbx
+            // 
+            this.armPbx.Location = new System.Drawing.Point(187, 12);
+            this.armPbx.Name = "armPbx";
+            this.armPbx.Size = new System.Drawing.Size(75, 102);
+            this.armPbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.armPbx.TabIndex = 11;
+            this.armPbx.TabStop = false;
+            // 
+            // ammPbx
+            // 
+            this.ammPbx.Location = new System.Drawing.Point(315, 12);
+            this.ammPbx.Name = "ammPbx";
+            this.ammPbx.Size = new System.Drawing.Size(75, 102);
+            this.ammPbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ammPbx.TabIndex = 12;
+            this.ammPbx.TabStop = false;
+            // 
+            // ammlgPbx
+            // 
+            this.ammlgPbx.Location = new System.Drawing.Point(440, 12);
+            this.ammlgPbx.Name = "ammlgPbx";
+            this.ammlgPbx.Size = new System.Drawing.Size(75, 102);
+            this.ammlgPbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ammlgPbx.TabIndex = 13;
+            this.ammlgPbx.TabStop = false;
             // 
             // Shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 209);
+            this.Controls.Add(this.ammlgPbx);
+            this.Controls.Add(this.ammPbx);
+            this.Controls.Add(this.armPbx);
+            this.Controls.Add(this.hpPbx);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ammlgBtn);
+            this.Controls.Add(this.ammBtn);
+            this.Controls.Add(this.armBtn);
+            this.Controls.Add(this.hpBtn);
             this.Name = "Shop";
             this.Text = "Shop";
+            ((System.ComponentModel.ISupportInitialize)(this.hpPbx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.armPbx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ammPbx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ammlgPbx)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -116,11 +173,15 @@ namespace hazifeladat
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button hpBtn;
+        private System.Windows.Forms.Button armBtn;
+        private System.Windows.Forms.Button ammBtn;
+        private System.Windows.Forms.Button ammlgBtn;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox hpPbx;
+        private System.Windows.Forms.PictureBox armPbx;
+        private System.Windows.Forms.PictureBox ammPbx;
+        private System.Windows.Forms.PictureBox ammlgPbx;
     }
 }

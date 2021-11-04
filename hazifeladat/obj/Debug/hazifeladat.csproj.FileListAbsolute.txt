@@ -32,3 +32,15 @@ D:\ZB\GIT\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.csproj.GenerateResourc
 D:\ZB\GIT\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.csproj.CoreCompileInputs.cache
 D:\ZB\GIT\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.exe
 D:\ZB\GIT\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.pdb
+C:\Users\Zick\Downloads\projekt_jatek-main\hazifeladat\bin\Debug\hazifeladat.exe.config
+C:\Users\Zick\Downloads\projekt_jatek-main\hazifeladat\bin\Debug\hazifeladat.exe
+C:\Users\Zick\Downloads\projekt_jatek-main\hazifeladat\bin\Debug\hazifeladat.pdb
+C:\Users\Zick\Downloads\projekt_jatek-main\hazifeladat\obj\Debug\hazifeladat.csproj.AssemblyReference.cache
+C:\Users\Zick\Downloads\projekt_jatek-main\hazifeladat\obj\Debug\hazifeladat.MainMenu.resources
+C:\Users\Zick\Downloads\projekt_jatek-main\hazifeladat\obj\Debug\hazifeladat.Game.resources
+C:\Users\Zick\Downloads\projekt_jatek-main\hazifeladat\obj\Debug\hazifeladat.Properties.Resources.resources
+C:\Users\Zick\Downloads\projekt_jatek-main\hazifeladat\obj\Debug\hazifeladat.Shop.resources
+C:\Users\Zick\Downloads\projekt_jatek-main\hazifeladat\obj\Debug\hazifeladat.csproj.GenerateResource.cache
+C:\Users\Zick\Downloads\projekt_jatek-main\hazifeladat\obj\Debug\hazifeladat.csproj.CoreCompileInputs.cache
+C:\Users\Zick\Downloads\projekt_jatek-main\hazifeladat\obj\Debug\hazifeladat.exe
+C:\Users\Zick\Downloads\projekt_jatek-main\hazifeladat\obj\Debug\hazifeladat.pdb
