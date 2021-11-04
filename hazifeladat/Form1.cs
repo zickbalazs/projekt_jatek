@@ -19,9 +19,10 @@ namespace hazifeladat
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Game game = new Game();
+            Game game = new Game(100, 0, 1, 60, 50, 0);
             game.Activate();
             game.Show();
+            this.Hide();
         }
     }
 }

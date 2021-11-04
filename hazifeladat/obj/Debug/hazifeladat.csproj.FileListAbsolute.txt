@@ -20,3 +20,15 @@ H:\Programozás\C#\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.csproj.Genera
 H:\Programozás\C#\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.csproj.CoreCompileInputs.cache
 H:\Programozás\C#\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.exe
 H:\Programozás\C#\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.pdb
+D:\ZB\GIT\projekt_jatek\hazifeladat\bin\Debug\hazifeladat.exe.config
+D:\ZB\GIT\projekt_jatek\hazifeladat\bin\Debug\hazifeladat.exe
+D:\ZB\GIT\projekt_jatek\hazifeladat\bin\Debug\hazifeladat.pdb
+D:\ZB\GIT\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.csprojAssemblyReference.cache
+D:\ZB\GIT\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.MainMenu.resources
+D:\ZB\GIT\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.Game.resources
+D:\ZB\GIT\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.Properties.Resources.resources
+D:\ZB\GIT\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.Shop.resources
+D:\ZB\GIT\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.csproj.GenerateResource.cache
+D:\ZB\GIT\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.csproj.CoreCompileInputs.cache
+D:\ZB\GIT\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.exe
+D:\ZB\GIT\projekt_jatek\hazifeladat\obj\Debug\hazifeladat.pdb

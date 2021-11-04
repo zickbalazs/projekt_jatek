@@ -40,6 +40,7 @@ namespace hazifeladat
             this.WaveTimer = new System.Windows.Forms.Timer(this.components);
             this.waveLbl = new System.Windows.Forms.Label();
             this.waveTimeLbl = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,11 +121,22 @@ namespace hazifeladat
             this.waveTimeLbl.Size = new System.Drawing.Size(0, 13);
             this.waveTimeLbl.TabIndex = 6;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 526);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 23);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.waveTimeLbl);
             this.Controls.Add(this.waveLbl);
             this.Controls.Add(this.ArmLbl);
@@ -155,5 +167,6 @@ namespace hazifeladat
         private System.Windows.Forms.Timer WaveTimer;
         private System.Windows.Forms.Label waveLbl;
         private System.Windows.Forms.Label waveTimeLbl;
+        private System.Windows.Forms.Button button1;
     }
 }

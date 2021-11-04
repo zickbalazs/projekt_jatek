@@ -14,23 +14,30 @@ namespace hazifeladat
 {
     public partial class Game : Form
     {
-        public Game()
+        public bool elore, hatra, balra, jobbra;
+        string irany = "elore";
+        public int hp = 100;
+        public int armor = 50;
+        int wave = 1;
+        int wavetime = 60;
+        public int penz = 0;
+        public int lsz = 50; 
+        public Game(int hp, int a, int wv, int wvT, int lsz, int p)
         {
             InitializeComponent();
+            wave = wv;
+            this.hp = hp;
+            armor = a;
+            wavetime = wvT;
+            penz = p;
+            this.lsz = lsz;
             pictureBox1.Image = Properties.Resources.heading;
             Spawner.Start();
             HitDetect.Start();
             WaveTimer.Start();
             waveLbl.Text = wave.ToString();
         }
-        public bool elore, hatra, balra, jobbra;
-        string irany="elore";
-        public int hp=100;
-        public int armor = 50;
-        int wave = 1;
-        int wavetime = 60;
-        public int penz = 0;
-        public int lsz = 50; //ezt még nem használja semmi!;
+        
         Random random = new Random();
         Random zspeed = new Random();
 
@@ -156,23 +163,24 @@ namespace hazifeladat
             if (wavetime == 0)
             {
                 wave++;
-                Shop shop = new Shop();
+                Shop shop = new Shop(hp, armor, lsz, penz, wave, ((wave * 60) / 2));
                 shop.money = penz;
                 shop.health = hp;
                 shop.arm = armor;
                 shop.Activate();
                 shop.Show();
-                while (shop.opened)
-                {
-                    Thread.Sleep(1000);
-                    //wavetime visszaállítása ide!!!
-                }
+                this.Close();
             }
             else
             {
                 waveTimeLbl.Text = $"{wavetime}s";
                 wavetime--;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void HitDetect_Tick(object sender, EventArgs e)

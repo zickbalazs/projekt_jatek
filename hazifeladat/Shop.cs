@@ -15,15 +15,23 @@ namespace hazifeladat
         public int money;
         public int health;
         public int arm;
-        public bool opened = true;
-        public Shop()
+        public int lsz;
+        int wave, wavetime;
+        public Shop(int hp, int arm, int lsz, int cash,  int wv, int wvT)
         {
+            health = hp;
+            this.arm = arm;
+            this.lsz = lsz;
+            money = cash;
+            wave = wv;
+            wavetime = wvT;
             InitializeComponent();
         }
-        //vásárlási funkciókat megcsinálni!
         private void button9_Click(object sender, EventArgs e)
         {
-            opened = false;
+            Game game = new Game(health, arm, wave, wavetime, lsz, money);
+            game.Show();
+            game.Activate();
             Close();
         }
     }
