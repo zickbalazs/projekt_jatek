@@ -26,10 +26,11 @@ namespace hazifeladat
             wave = wv;
             wavetime = wvT;
             InitializeComponent();
-            label1.Text = $"$: {money}";
+            label1.Text = $"iii: {lsz}\t$: {money}";
             hpPbx.Image = Properties.Resources.medkit;
             armPbx.Image = Properties.Resources.armor;
             ammPbx.Image = Properties.Resources.ammo;
+            ammlgPbx.Image = Properties.Resources.ammolg;
             if (money <= 40) ammBtn.Enabled = false;
             if (money <= 250) hpBtn.Enabled = false;
             if (money <= 500) armBtn.Enabled = false;
@@ -44,8 +45,9 @@ namespace hazifeladat
                 money -= 250;
                 hpBtn.Enabled = false;
             }
+            else if (arm == 100) hpBtn.Enabled = false;
             else hpBtn.Enabled = false;
-            label1.Text = $"$: {money}";
+            label1.Text = $"iii: {lsz}\t$: {money}";
         }
 
         private void armBtn_Click(object sender, EventArgs e)
@@ -56,8 +58,9 @@ namespace hazifeladat
                 money -= 500;
                 armBtn.Enabled = false;
             }
+            else if (arm == 100) armBtn.Enabled = false;
             else armBtn.Enabled = false;
-            label1.Text = $"$: {money}";
+            label1.Text = $"iii: {lsz}\t$: {money}";
 
         }
 
@@ -67,9 +70,10 @@ namespace hazifeladat
             {
                 lsz += 10;
                 money -= 40;
+                ammBtn.Enabled = false;
             }
             else ammBtn.Enabled = false;
-            label1.Text = $"$: {money}";
+            label1.Text = $"iii: {lsz}\t$: {money}";
 
         }
 
@@ -79,9 +83,10 @@ namespace hazifeladat
             {
                 lsz += 50;
                 money -= 195;
+                ammlgBtn.Enabled = false;
             }
             else ammlgBtn.Enabled = false;
-            label1.Text = $"$: {money}";
+            label1.Text = $"iii: {lsz}\t$: {money}";
         }
 
         private void button9_Click(object sender, EventArgs e)

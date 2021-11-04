@@ -19,7 +19,7 @@ namespace hazifeladat
         public void bullSpawn(Form form)
         {
             bull.BackColor = Color.Black;
-            bull.Size = new Size(7, 7);
+            bull.Size = new Size(10, 10);
             bull.Name = "bull";
             bull.Left = bullViz;
             bull.Top = bullFugg;

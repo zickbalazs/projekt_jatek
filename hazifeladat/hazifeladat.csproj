@@ -121,5 +121,41 @@
   <ItemGroup>
     <None Include="Resources\medkit.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zombU.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zombD.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zombL.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zombR.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ammolg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\armor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\ammo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\medkit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\turretD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\turretL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\turretR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\turretU.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

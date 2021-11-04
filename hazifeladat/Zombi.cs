@@ -18,25 +18,27 @@ namespace hazifeladat
         public string type;
         public void Teremt(Form form)
         {
+            zomb.SizeMode = PictureBoxSizeMode.StretchImage;
+            zomb.BackColor = Color.Transparent;
             zomb.Name = type;
             zomb.Size = new Size(100, 100);
             zomb.Left = zombiViz;
             zomb.Top = zombiFugg;
             if (HaladasiIrany == "fent")
             {
-                zomb.Image = Properties.Resources.headingD;
+                zomb.Image = Properties.Resources.zombD;
             }
             else if (HaladasiIrany == "lent")
             {
-                zomb.Image = Properties.Resources.heading;
+                zomb.Image = Properties.Resources.zombU;
             }
             else if (HaladasiIrany == "balrol")
             {
-                zomb.Image = Properties.Resources.headingR;
+                zomb.Image = Properties.Resources.zombR;
             }
             else if (HaladasiIrany == "jobbrol")
             {
-                zomb.Image = Properties.Resources.headingL;
+                zomb.Image = Properties.Resources.zombL;
             }
             form.Controls.Add(zomb);
             t.Interval = 100;

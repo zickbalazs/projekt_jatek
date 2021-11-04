@@ -24,5 +24,10 @@ namespace hazifeladat
             game.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Irányítás\nNézési irány változtatása: WASD\nLövés: Space");
+        }
     }
 }

@@ -32,16 +32,13 @@ namespace hazifeladat
             wavetime = wvT;
             penz = p;
             lsz = ammo;
-            pictureBox1.Image = Properties.Resources.heading;
+            pictureBox1.Image = Properties.Resources.turretU;
             Spawner.Start();
             HitDetect.Start();
             WaveTimer.Start();
             waveLbl.Text = $"Hullám: {wave}";
         }
-        
         Random random = new Random();
-        Random zspeed = new Random();
-
         private void Game_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.A) balra = false;
@@ -55,7 +52,7 @@ namespace hazifeladat
             if (wave < 3)
             {
                 Zombi z = new Zombi();
-                z.fast = zspeed.Next(1, 10);
+                z.fast = random.Next(1, 10);
                 if (z.fast < 4) z.type = "Zombi_Slow";
                 else if (z.fast > 4 && z.fast < 8) z.type = "Zombi_Medium";
                 else z.type = "Zombi_Fast";
@@ -67,7 +64,7 @@ namespace hazifeladat
                         z.zombiFugg = pictureBox1.Location.Y;
                         break;
                     case 2:
-                        z.HaladasiIrany = "jobbra";
+                        z.HaladasiIrany = "jobbrol";
                         z.zombiViz = 900;
                         z.zombiFugg = pictureBox1.Location.Y;
                         break;
@@ -77,8 +74,8 @@ namespace hazifeladat
                         z.zombiViz = pictureBox1.Location.X;
                         break;
                     case 4:
-                        z.HaladasiIrany = "fent";
-                        z.zombiFugg = -100;
+                        z.HaladasiIrany = "lent";
+                        z.zombiFugg = 900;
                         z.zombiViz = pictureBox1.Location.X;
                         break;
                 }
@@ -90,7 +87,7 @@ namespace hazifeladat
                 for (int i = 1; i < 3; i++)
                 {
                     Zombi z = new Zombi();
-                    z.fast = zspeed.Next(10, 16);
+                    z.fast = random.Next(10, 16);
                     if (z.fast < 4) z.type = "Zombi_Slow";
                     else if (z.fast > 4 && z.fast < 8) z.type = "Zombi_Medium";
                     else z.type = "Zombi_Fast";
@@ -102,13 +99,13 @@ namespace hazifeladat
                             z.zombiFugg = pictureBox1.Location.Y;
                             break;
                         case 2:
-                            z.HaladasiIrany = "jobbra";
+                            z.HaladasiIrany = "jobbrol";
                             z.zombiViz = 900;
                             z.zombiFugg = pictureBox1.Location.Y;
                             break;
                         case 3:
-                            z.HaladasiIrany = "fent";
-                            z.zombiFugg = -100;
+                            z.HaladasiIrany = "lent";
+                            z.zombiFugg = 900;
                             z.zombiViz = pictureBox1.Location.X;
                             break;
                         case 4:
@@ -126,7 +123,7 @@ namespace hazifeladat
                 for (int i = 1; i < 4; i++)
                 {
                     Zombi z = new Zombi();
-                    z.fast = zspeed.Next(10, 16);
+                    z.fast = random.Next(10, 16);
                     if (z.fast < 4) z.type = "Zombi_Slow";
                     else if (z.fast > 4 && z.fast < 8) z.type = "Zombi_Medium";
                     else z.type = "Zombi_Fast";
@@ -138,18 +135,18 @@ namespace hazifeladat
                             z.zombiFugg = pictureBox1.Location.Y;
                             break;
                         case 2:
-                            z.HaladasiIrany = "jobbra";
+                            z.HaladasiIrany = "jobbrol";
                             z.zombiViz = 900;
                             z.zombiFugg = pictureBox1.Location.Y;
                             break;
                         case 3:
-                            z.HaladasiIrany = "fent";
+                            z.HaladasiIrany = "lent";
                             z.zombiFugg = -100;
                             z.zombiViz = pictureBox1.Location.X;
                             break;
                         case 4:
                             z.HaladasiIrany = "fent";
-                            z.zombiFugg = -100;
+                            z.zombiFugg = 900;
                             z.zombiViz = pictureBox1.Location.X;
                             break;
                     }
@@ -169,13 +166,18 @@ namespace hazifeladat
                 shop.arm = armor;
                 shop.Activate();
                 shop.Show();
-                this.Close();
+                Close();
             }
             else
             {
                 waveTimeLbl.Text = $"{wavetime}s";
                 wavetime--;
             }
+        }
+
+        private void Game_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -188,9 +190,12 @@ namespace hazifeladat
             HPLbl.Text = $"+: {hp}";
             ArmLbl.Text = $"Arm: {hp}";
             CashLbl.Text = $"$: {penz}";
-            ammoLbl.Text = $"A: {lsz}";
+            ammoLbl.Text = $"iii: {lsz}";
             if (hp<=0)
             {
+                WaveTimer.Stop();
+                HitDetect.Stop();
+                MessageBox.Show("A játéknak vége!");
                 Application.Exit();
             }
             foreach (Control i in Controls)
@@ -204,11 +209,6 @@ namespace hazifeladat
                             if (j.Name == "Zombi_Fast") penz += 40;
                             if (j.Name == "Zombi_Medium") penz += 20;
                             if (j.Name == "Zombi_Slow") penz += 10;
-                            PictureBox asd = new PictureBox();
-                            asd.Image = Properties.Resources.heading;
-                            asd.Location = new Point(j.Location.X + random.Next(-11, 11), j.Location.Y + random.Next(-11, 11));
-                            asd.SendToBack();
-                            Controls.Add(asd);
                             Controls.Remove(i);
                             Controls.Remove(j);
                             i.Dispose();
@@ -240,25 +240,25 @@ namespace hazifeladat
             {
                 balra = true;
                 irany = "balra";
-                pictureBox1.Image = Properties.Resources.headingL;
+                pictureBox1.Image = Properties.Resources.turretL;
             }
             if (e.KeyCode==Keys.D)
             {
                 jobbra = true;
                 irany = "jobbra";
-                pictureBox1.Image = Properties.Resources.headingR;
+                pictureBox1.Image = Properties.Resources.turretR;
             }
             if (e.KeyCode==Keys.W)
             {
                 elore = true;
                 irany = "elore";
-                pictureBox1.Image = Properties.Resources.heading;
+                pictureBox1.Image = Properties.Resources.turretU;
             }
             if (e.KeyCode==Keys.S)
             {
                 hatra = true;
                 irany = "hatra";
-                pictureBox1.Image = Properties.Resources.headingD;
+                pictureBox1.Image = Properties.Resources.turretD;
             }
             if (e.KeyCode == Keys.Space) Lo(irany);
         }

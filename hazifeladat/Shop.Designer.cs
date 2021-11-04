@@ -35,19 +35,19 @@ namespace hazifeladat
             this.ammlgBtn = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.hpPbx = new System.Windows.Forms.PictureBox();
-            this.armPbx = new System.Windows.Forms.PictureBox();
-            this.ammPbx = new System.Windows.Forms.PictureBox();
             this.ammlgPbx = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.hpPbx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.armPbx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ammPbx)).BeginInit();
+            this.ammPbx = new System.Windows.Forms.PictureBox();
+            this.armPbx = new System.Windows.Forms.PictureBox();
+            this.hpPbx = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ammlgPbx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ammPbx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.armPbx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hpPbx)).BeginInit();
             this.SuspendLayout();
             // 
             // hpBtn
             // 
-            this.hpBtn.Location = new System.Drawing.Point(61, 120);
+            this.hpBtn.Location = new System.Drawing.Point(60, 124);
             this.hpBtn.Name = "hpBtn";
             this.hpBtn.Size = new System.Drawing.Size(75, 23);
             this.hpBtn.TabIndex = 0;
@@ -57,7 +57,7 @@ namespace hazifeladat
             // 
             // armBtn
             // 
-            this.armBtn.Location = new System.Drawing.Point(187, 120);
+            this.armBtn.Location = new System.Drawing.Point(186, 124);
             this.armBtn.Name = "armBtn";
             this.armBtn.Size = new System.Drawing.Size(75, 23);
             this.armBtn.TabIndex = 1;
@@ -67,7 +67,7 @@ namespace hazifeladat
             // 
             // ammBtn
             // 
-            this.ammBtn.Location = new System.Drawing.Point(315, 120);
+            this.ammBtn.Location = new System.Drawing.Point(314, 124);
             this.ammBtn.Name = "ammBtn";
             this.ammBtn.Size = new System.Drawing.Size(75, 23);
             this.ammBtn.TabIndex = 2;
@@ -77,7 +77,7 @@ namespace hazifeladat
             // 
             // ammlgBtn
             // 
-            this.ammlgBtn.Location = new System.Drawing.Point(440, 120);
+            this.ammlgBtn.Location = new System.Drawing.Point(439, 124);
             this.ammlgBtn.Name = "ammlgBtn";
             this.ammlgBtn.Size = new System.Drawing.Size(75, 23);
             this.ammlgBtn.TabIndex = 3;
@@ -98,52 +98,51 @@ namespace hazifeladat
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label1.Location = new System.Drawing.Point(0, 162);
             this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 3, 20);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(250, 0, 0, 11);
-            this.label1.Size = new System.Drawing.Size(269, 24);
+            this.label1.Size = new System.Drawing.Size(584, 24);
             this.label1.TabIndex = 9;
             this.label1.Text = "$: ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // hpPbx
+            // ammlgPbx
             // 
-            this.hpPbx.Location = new System.Drawing.Point(61, 12);
-            this.hpPbx.Name = "hpPbx";
-            this.hpPbx.Size = new System.Drawing.Size(75, 102);
-            this.hpPbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hpPbx.TabIndex = 10;
-            this.hpPbx.TabStop = false;
-            // 
-            // armPbx
-            // 
-            this.armPbx.Location = new System.Drawing.Point(187, 12);
-            this.armPbx.Name = "armPbx";
-            this.armPbx.Size = new System.Drawing.Size(75, 102);
-            this.armPbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.armPbx.TabIndex = 11;
-            this.armPbx.TabStop = false;
+            this.ammlgPbx.Location = new System.Drawing.Point(439, 43);
+            this.ammlgPbx.Name = "ammlgPbx";
+            this.ammlgPbx.Size = new System.Drawing.Size(75, 75);
+            this.ammlgPbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ammlgPbx.TabIndex = 13;
+            this.ammlgPbx.TabStop = false;
             // 
             // ammPbx
             // 
-            this.ammPbx.Location = new System.Drawing.Point(315, 12);
+            this.ammPbx.Location = new System.Drawing.Point(314, 43);
             this.ammPbx.Name = "ammPbx";
-            this.ammPbx.Size = new System.Drawing.Size(75, 102);
+            this.ammPbx.Size = new System.Drawing.Size(75, 75);
             this.ammPbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ammPbx.TabIndex = 12;
             this.ammPbx.TabStop = false;
             // 
-            // ammlgPbx
+            // armPbx
             // 
-            this.ammlgPbx.Location = new System.Drawing.Point(440, 12);
-            this.ammlgPbx.Name = "ammlgPbx";
-            this.ammlgPbx.Size = new System.Drawing.Size(75, 102);
-            this.ammlgPbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ammlgPbx.TabIndex = 13;
-            this.ammlgPbx.TabStop = false;
+            this.armPbx.Location = new System.Drawing.Point(186, 43);
+            this.armPbx.Name = "armPbx";
+            this.armPbx.Size = new System.Drawing.Size(75, 75);
+            this.armPbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.armPbx.TabIndex = 11;
+            this.armPbx.TabStop = false;
+            // 
+            // hpPbx
+            // 
+            this.hpPbx.Location = new System.Drawing.Point(60, 43);
+            this.hpPbx.Name = "hpPbx";
+            this.hpPbx.Size = new System.Drawing.Size(75, 75);
+            this.hpPbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hpPbx.TabIndex = 10;
+            this.hpPbx.TabStop = false;
             // 
             // Shop
             // 
@@ -162,12 +161,11 @@ namespace hazifeladat
             this.Controls.Add(this.hpBtn);
             this.Name = "Shop";
             this.Text = "Shop";
-            ((System.ComponentModel.ISupportInitialize)(this.hpPbx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.armPbx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ammPbx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ammlgPbx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ammPbx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.armPbx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hpPbx)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
