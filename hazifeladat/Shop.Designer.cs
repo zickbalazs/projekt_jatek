@@ -39,6 +39,7 @@ namespace hazifeladat
             this.ammPbx = new System.Windows.Forms.PictureBox();
             this.armPbx = new System.Windows.Forms.PictureBox();
             this.hpPbx = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ammlgPbx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ammPbx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.armPbx)).BeginInit();
@@ -144,11 +145,25 @@ namespace hazifeladat
             this.hpPbx.TabIndex = 10;
             this.hpPbx.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(584, 26);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Bezárás";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 209);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.ammlgPbx);
             this.Controls.Add(this.ammPbx);
             this.Controls.Add(this.armPbx);
@@ -159,6 +174,7 @@ namespace hazifeladat
             this.Controls.Add(this.ammBtn);
             this.Controls.Add(this.armBtn);
             this.Controls.Add(this.hpBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Shop";
             this.Text = "Shop";
             ((System.ComponentModel.ISupportInitialize)(this.ammlgPbx)).EndInit();
@@ -181,5 +197,6 @@ namespace hazifeladat
         private System.Windows.Forms.PictureBox armPbx;
         private System.Windows.Forms.PictureBox ammPbx;
         private System.Windows.Forms.PictureBox ammlgPbx;
+        private System.Windows.Forms.Label label2;
     }
 }

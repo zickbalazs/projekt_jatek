@@ -41,6 +41,7 @@ namespace hazifeladat
             this.waveTimeLbl = new System.Windows.Forms.Label();
             this.ammoLbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -136,12 +137,26 @@ namespace hazifeladat
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label1.Location = new System.Drawing.Point(0, 585);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Kilépés";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Green;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(800, 600);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ammoLbl);
             this.Controls.Add(this.waveTimeLbl);
             this.Controls.Add(this.waveLbl);
@@ -149,6 +164,7 @@ namespace hazifeladat
             this.Controls.Add(this.HPLbl);
             this.Controls.Add(this.CashLbl);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximumSize = new System.Drawing.Size(800, 600);
             this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "Game";
@@ -175,5 +191,6 @@ namespace hazifeladat
         private System.Windows.Forms.Label waveLbl;
         private System.Windows.Forms.Label waveTimeLbl;
         private System.Windows.Forms.Label ammoLbl;
+        private System.Windows.Forms.Label label1;
     }
 }
